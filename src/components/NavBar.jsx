@@ -1,15 +1,18 @@
+import { CartWidget } from './CartWidget'
+
 export const NavBar = () => {
 
     return (
         <div className="navBar">
-            <h1>Logo</h1>
+            <h1>Sport Place</h1>
 
             <ul>
-                <li>Botines</li>
-                <li>Running</li>
-                <li>Zapatillas</li>
-                <li>Todo</li>
+                <li>Adidas</li>
+                <li>Nike</li>
+                <li>Puma</li>
             </ul>
+
+            <CartWidget/>
         </div>
       );
 

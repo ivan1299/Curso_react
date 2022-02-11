@@ -2,13 +2,12 @@ import './style.css'
 import { NavBar } from './components/NavBar'
 import { ItemListContainer } from './components/ItemListContainer'
 
-
 function App() {
   return (
-    <body>
+    <div className="body">
     <NavBar/>
     <ItemListContainer/>
-    </body>
+    </div>
     );
 }
 

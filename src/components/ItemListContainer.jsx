@@ -1,32 +1,47 @@
+import { useEffect, useState } from "react";
+import { Item } from './Item'
+import { ItemList } from './ItemList'
+import {stock } from '../datos/stock'
+
 export const ItemListContainer = () => {
 
+    const [productos, setProductos] = useState ([])
+    const [loading, setLoading] = useState(false)
+
+    const pedirDatos = (res) => { 
+    return new Promise ((resolve, reject) => {
+        setTimeout(()=>{
+            resolve (stock)
+            
+        }, 2000)
+    })
+    }
+    
+    useEffect(()=>{
+
+        setLoading(true)
+        
+        pedirDatos(false)
+        .then((res)=>{
+            setProductos(res)
+        })
+        .catch((err)=>{
+            console.log(err)
+        })
+        .finally(()=>{
+            setLoading(false)
+        })
+    },[])
+
     return (
-        <div className="catalog">
-        <div className="card">
-            <div className="container">
-                <h4><b>New Balance</b></h4> 
-                <p>13 Modelos</p> 
-            </div>
-        </div>
-        <div className="card">
-            <div className="container">
-                <h4><b>Puma</b></h4> 
-                <p>30 Moldeos</p> 
-            </div>
-        </div>
-        <div className="card">
-            <div className="container">
-                <h4><b>Adidas</b></h4> 
-                <p>28 Modelos</p> 
-            </div>
-        </div>
-        <div className="card">
-            <div className="container">
-                <h4><b>Nike</b></h4> 
-                <p>45 Modelos</p> 
-            </div>
-        </div>
-        </div>
+        <>
+        {
+        
+            loading ? <h1>Loading...</h1>
+            :<ItemList productos={productos}/>        
+        
+        }
+        </>
       );
 
 };
