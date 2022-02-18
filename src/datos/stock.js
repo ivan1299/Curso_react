@@ -1,27 +1,63 @@
-import Adidas from '../images/Adidas.jpg';
-import Nike from '../images/Nike.jpg';
-import Puma from '../images/Puma.jpg';
+import AdidasGolleto from '../images/AdidasGolleto.jpg';
+import NikePhanton from '../images/NikePhanton.jpg';
+import PumaFuture5 from '../images/PumaFuture5.4.jpg';
+import AdidasKakarai from '../images/AdidasKakarai.jpg';
+import NikeSuperfly from '../images/NikeSuperfly.jpg';
+import PumaZ from '../images/PumaZ.jpg';
 
 export const stock = [
     {
         id:1, 
-        title:'Adidas Goletto VIII Tf', 
-        description:'Talles: 43.5 / 44 / 45', 
+        title:'Adidas Goletto', 
+        description:'Talles: 42 / 42,5 / 43', 
         price:10000, 
-        pictureUrl:Adidas,
+        pictureUrl:AdidasGolleto,
+        marca:'adidas',
+        deporte:'futbol',
     },
     {
         id:2, 
-        title:'Nike Superfly 7 Academy', 
-        description:'Talles: 41 / 43 / 44', 
+        title:'Nike Superfly 7', 
+        description:'Talles: 42 / 42,5 / 43', 
         price:15000, 
-        pictureUrl:Nike,
+        pictureUrl:NikeSuperfly,
+        marca:'nike',
+        deporte:'futbol',
     },
     {
         id:3, 
-        title:'Botines Puma Future', 
+        title:'Nike Phanton', 
         description:'Talles: 42 / 42,5 / 43', 
         price:8000, 
-        pictureUrl:Puma,
+        pictureUrl:NikePhanton,
+        marca:'nike',
+        deporte:'futbol',
+    },
+    {
+        id:4, 
+        title:'Adidas Kakarai', 
+        description:'Talles: 42 / 42,5 / 43', 
+        price:12000, 
+        pictureUrl:AdidasKakarai,
+        marca:'adidas',
+        deporte:'futbol',
+    },
+    {
+        id:5, 
+        title:'Puma Future 5.4', 
+        description:'Talles: 42 / 42,5 / 43', 
+        price:9000, 
+        pictureUrl:PumaFuture5,
+        marca:'puma',
+        deporte:'futbol',
+    },
+    {
+        id:6, 
+        title:'Puma Z', 
+        description:'Talles: 42 / 42,5 / 43', 
+        price:8000, 
+        pictureUrl:PumaZ,
+        marca:'puma',
+        deporte:'futbol',
     },
 ]
