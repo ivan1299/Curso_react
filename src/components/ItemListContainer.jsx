@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useEffect, useState, useContext } from "react";
 import { ItemList } from './ItemList'
 import { stock } from '../datos/stock'
 import { useParams } from "react-router-dom";
@@ -9,8 +9,6 @@ export const ItemListContainer = () => {
     const [loading, setLoading] = useState(false)
 
     const {marcaId} = useParams()
-
-    console.log(marcaId)
 
     const pedirDatos = () => { 
     return new Promise ((resolve, reject) => {

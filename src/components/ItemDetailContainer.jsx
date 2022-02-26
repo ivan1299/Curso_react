@@ -9,15 +9,12 @@ export const ItemDetailContainer = () => {
     const [item, setItem] = useState (null)
 
     const {itemId} = useParams()
-
-    console.log(itemId)
-    console.log(item)
-
+    
     const pedirDatos = () => { 
         return new Promise ((resolve, reject) => {
             setTimeout(()=> {
                 resolve (stock)
-            }, 1000)
+            }, 500)
         })
         }
 
