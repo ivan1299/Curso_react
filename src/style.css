@@ -154,6 +154,14 @@ h1{
     align-items: center;
     font-size: 25px;
     text-decoration: none;
+    visibility: visible;
+    transition: all .5s ease-out;
+    margin-right: 20px ;
+}
+
+.cartHidden{
+    opacity: 0;
+    visibility: hidden;
 }
 
 .cartProduct{
@@ -195,3 +203,4 @@ h3{
 .detailCart{
     padding: 0px 30px;
 }
+

@@ -5,9 +5,10 @@ import { CartContext } from './CartContext';
 
 export const CartWidget = () => {
 
-    const {cantidadCart} = useContext(CartContext)
+    const {cantidadCart, cart} = useContext(CartContext)
+
     return (
-        <Link to="/cart" className="cartNav">
+        <Link to="/cart" className={cart.length === 0 ?'cartNav cartHidden' : 'cartNav'}>
             <img src={carrito_vacio} alt="" className="cartImg"/>
             <span >{cantidadCart()}</span>
         </Link> 

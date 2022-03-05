@@ -2,6 +2,8 @@ import { useEffect, useState, useContext } from "react";
 import { ItemList } from './ItemList'
 import { stock } from '../datos/stock'
 import { useParams } from "react-router-dom";
+import { dataBase } from "../firebase/config";
+import { collection, getDocs, query, where} from "firebase/firestore";
 
 export const ItemListContainer = () => {
 
@@ -21,21 +23,23 @@ export const ItemListContainer = () => {
     
     useEffect(()=>{
         setLoading(true)
+
+        const productosRef = collection(dataBase, 'stock')
         
-        pedirDatos(false)
-        .then((res)=>{
-           if(marcaId){
-            setProductos(res.filter((el)=> el.marca === marcaId))
-           } else{
-               setProductos(res)
-           }
-        })
-        .catch((err)=>{
-            console.log(err)
-        })
-        .finally(()=>{
-            setLoading(false)
-        })
+        const q = marcaId ? query (productosRef, where("marca","==",marcaId)) : productosRef
+
+        getDocs(q)
+            .then((resp)=> {
+                setProductos(resp.docs.map((doc)=> {
+                    return{
+                        id: doc.id,
+                        ...doc.data()
+                    }
+                }))
+            }) 
+            .finally(()=>{
+                setLoading(false)
+            })
     },[marcaId])
 
     return (
