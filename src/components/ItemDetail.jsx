@@ -36,7 +36,7 @@ export const ItemDetail= ({id, title, description, price, pictureUrl}) => {
                 </Link>
                 :
                 <>
-                <div className="productBuy">
+                <div className="">
                 <ItemCounter add={add}/>
                 </div>
                 </>
