@@ -1,6 +1,5 @@
 import { useEffect, useState, useContext } from "react";
 import { ItemList } from './ItemList'
-import { stock } from '../datos/stock'
 import { useParams } from "react-router-dom";
 import { dataBase } from "../firebase/config";
 import { collection, getDocs, query, where} from "firebase/firestore";
@@ -15,7 +14,7 @@ export const ItemListContainer = () => {
     const pedirDatos = () => { 
     return new Promise ((resolve, reject) => {
         setTimeout(()=>{
-            resolve (stock)
+            resolve ()
             
         }, 2000)
     })

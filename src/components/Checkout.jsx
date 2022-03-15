@@ -55,9 +55,11 @@ export const Checkout = () => {
     if(orderId){
         return(
             <div className="body">
-            <h1>Gracias por tu compra</h1>
-            <h3>Tu id de compra es: {orderId} </h3>
-            <Link to="/" className=""> vlver al inicio </Link>
+                <div className="check">
+                    <h1>Gracias por tu compra</h1>
+                    <h2>Tu id de compra es: {orderId} </h2>
+                    <Link to="/" className="productBtn"> Volver al inicio </Link>
+                </div>
             </div>
         )
     }
@@ -67,9 +69,8 @@ export const Checkout = () => {
     }
     return(
         <div className="body">
+            <div className="check"> 
             <h1>Checkout</h1>
-
-            <hr />
 
             <form onSubmit={handleSumbit}>
                 <input
@@ -97,9 +98,10 @@ export const Checkout = () => {
                     name='tel'
                 />
                 <button type="submit" className="productBtnBuy">
-                    enviar
+                    Enviar
                 </button>
             </form>
+        </div>
         </div>
     )
     }

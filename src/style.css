@@ -4,7 +4,7 @@
 }
 
 .body{
-    height: 150vh;
+    height: 2000px;
     width: 100%;
     font-family: 'Trebuchet MS';
     background: linear-gradient(150deg, rgba(143,69,241,1) 0%, rgba(4,7,56,1) 100%);
@@ -39,6 +39,7 @@ h1{
     justify-content: space-between;
 }
 
+
 .brand{
     color: white;
     text-align: center;
@@ -47,6 +48,8 @@ h1{
     text-decoration: none;
     font-size: 25px;
     font-weight: 600;
+    background-color: rgb(43, 43, 43);
+    border: none;
 }
 
 .brand:hover{
@@ -75,7 +78,7 @@ h1{
     border-radius: 25px;
     background: rgb(43, 43, 43);
     width: 200px;
-    height: 300px;
+    height: 325px;
     text-align: center;
     margin: 20px 50px;
     color: white;
@@ -98,6 +101,7 @@ h1{
     font-weight: 700;
     border-radius: 25px;
     border: 2px solid rgb(69, 235, 241);
+    text-decoration: none;
 }
 
 .productBtn:hover{
@@ -170,6 +174,12 @@ h1{
     color: white;
     font-size: 20px;
     padding: 10px 20px;
+    margin-top: 50px;
+}
+
+h2{
+    color: rgb(69, 235, 241);
+    margin: 50px 0px 40px 0px;
 }
 
 h3{
@@ -198,6 +208,7 @@ h3{
     font-weight: 700;
     border-radius: 25px;
     border: 2px solid rgb(69, 235, 241);
+    text-decoration: none;
 }
 
 .detailCart{
@@ -215,3 +226,36 @@ h3{
     border-radius: 10px;
     border: 2px solid rgb(69, 235, 241);
 }
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+  }
+  
+  .dropdown-content a{
+    float: none;
+    color: rgb(43, 43, 43);
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+    background-color: #ddd;
+  }
+  
+  .dropdown-content a:hover {
+    background-color: rgb(112, 112, 112);
+  }
+  
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }
+
+  .check{
+      display:flex;
+      align-items: center;
+      flex-direction: column;
+  }
